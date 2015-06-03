@@ -37,22 +37,24 @@ public class AdaptingGravity : MonoBehaviour {
         // helper to visualise the ground check ray in the scene view
         Debug.DrawLine(transform.position + (Vector3.up * 0.1f), transform.position + (Vector3.up * 0.1f) + (gravityDirection * gravityCheckDistance), Color.green);
 #endif
+        onGround = false;
         // 0.1f is a small offset to start the ray from inside the character
         // it is also good to note that the transform position in the sample assets is at the base of the character
         if (Physics.Raycast(transform.position + (Vector3.up * 0.1f), gravityDirection, out hitInfo, gravityCheckDistance))
         {
-            Debug.Log(hitInfo.transform.tag);
-            groundNormal = hitInfo.normal;
-            gravityDirection = -groundNormal;
-            groundDistance = hitInfo.distance - 0.1f;
-            if (Physics.Raycast(transform.position + (Vector3.up * 0.1f), gravityDirection, out hitInfo, groundCheckDistance + 0.1f))
+            if(hitInfo.transform.tag == "Ground")
             {
-                onGround = true;
+                groundNormal = hitInfo.normal;
+                gravityDirection = -groundNormal;
+                groundDistance = hitInfo.distance - 0.1f;
+                if (Physics.Raycast(transform.position + (Vector3.up * 0.1f), gravityDirection, out hitInfo, groundCheckDistance + 0.1f))
+                {
+                    if (hitInfo.transform.tag == "Ground")
+                    {
+                        onGround = true;
+                    }
+                }
             }
-        }
-        else
-        {
-            onGround = false;
         }
     }
 
