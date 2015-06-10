@@ -3,7 +3,10 @@
 namespace Deml.Physics.Gravity
 {
     [RequireComponent(typeof(Rigidbody))]
-    public class AdaptingGravity : MonoBehaviour {
+    public class AdaptingGravity : MonoBehaviour
+    {
+        public delegate void GravityEventHandler(Vector3 gravityDirection);
+        public static event GravityEventHandler OnGravityChangedEvent;
         public bool OnGround { get; private set; }
         public Vector3 GroundNormal { get; private set; }
         [SerializeField]
@@ -46,8 +49,15 @@ namespace Deml.Physics.Gravity
             {
                 if(hitInfo.transform.tag == "Ground")
                 {
-                    GroundNormal = hitInfo.normal;
-                    gravityDirection = -GroundNormal;
+                    if (GroundNormal != hitInfo.normal)
+                    {
+                        GroundNormal = hitInfo.normal;
+                        gravityDirection = -GroundNormal;
+                        if (OnGravityChangedEvent != null)
+                        {
+                            OnGravityChangedEvent(gravityDirection);
+                        }
+                    }
                     groundDistance = hitInfo.distance - 0.1f;
                     if (UnityEngine.Physics.Raycast(transform.position + (Vector3.up * 0.1f), gravityDirection, out hitInfo, groundCheckDistance + 0.1f))
                     {

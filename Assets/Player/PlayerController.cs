@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour
 	    rigidbody = GetComponent<Rigidbody>();
         State = PlayerState.Initialized;
         EnableState(PlayerState.Movable);
-        EnableState(PlayerState.Turnable);
+        //EnableState(PlayerState.Turnable);
 	}
 
     public void Move(Vector3 movementInput, float rotationInput, bool jumpingInput)
@@ -51,7 +51,6 @@ public class PlayerController : MonoBehaviour
 
     private void UpdateMovement(Vector3 movementInput, bool jumping)
     {
-        Debug.Log(movementInput);
         Vector3 mappedMovement = movementInput.x * transform.right + movementInput.z * transform.forward;
         float groundModifier = (gravityController.OnGround) ? 1.0f : 0.2f;
 
@@ -67,7 +66,9 @@ public class PlayerController : MonoBehaviour
 
     private void UpdateRotation(float angle)
     {
-        transform.Rotate(transform.up, angle * 1000f * mouseSensitivity * Time.fixedDeltaTime);
+        Quaternion rotation = Quaternion.AngleAxis(angle*1000f*mouseSensitivity*Time.fixedDeltaTime,
+            gravityController.GroundNormal);
+        rigidbody.rotation = rotation*rigidbody.rotation;
     }
 
 
