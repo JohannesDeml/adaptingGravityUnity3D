@@ -45,7 +45,7 @@ namespace Deml.Physics.Gravity
             OnGround = false;
             // 0.1f is a small offset to start the ray from inside the character
             // it is also good to note that the transform position in the sample assets is at the base of the character
-            if (UnityEngine.Physics.Raycast(transform.position + (Vector3.up * 0.1f), gravityDirection, out hitInfo, gravityCheckDistance))
+            if (UnityEngine.Physics.Raycast(transform.position + (transform.up * 0.1f), gravityDirection, out hitInfo, gravityCheckDistance))
             {
                 if(hitInfo.transform.tag == "Ground")
                 {
@@ -59,7 +59,7 @@ namespace Deml.Physics.Gravity
                         }
                     }
                     groundDistance = hitInfo.distance - 0.1f;
-                    if (UnityEngine.Physics.Raycast(transform.position + (Vector3.up * 0.1f), gravityDirection, out hitInfo, groundCheckDistance + 0.1f))
+                    if (UnityEngine.Physics.Raycast(transform.position + (transform.up * 0.1f), gravityDirection, out hitInfo, groundCheckDistance + 0.1f))
                     {
                         if (hitInfo.transform.tag == "Ground")
                         {
