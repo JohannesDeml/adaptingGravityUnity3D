@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour
 	    rigidbody = GetComponent<Rigidbody>();
         State = PlayerState.Initialized;
         EnableState(PlayerState.Movable);
-        //EnableState(PlayerState.Turnable);
+        EnableState(PlayerState.Turnable);
 	}
 
     public void Move(Vector3 movementInput, float rotationInput, bool jumpingInput)
@@ -67,9 +67,10 @@ public class PlayerController : MonoBehaviour
 
     private void UpdateRotation(float angle)
     {
+        Debug.Log("Jup");
         Quaternion rotation = Quaternion.AngleAxis(angle*1000f*mouseSensitivity*Time.fixedDeltaTime,
             gravityController.GroundNormal);
-        rigidbody.rotation = rotation*rigidbody.rotation;
+        transform.rotation = rotation*transform.rotation;
     }
 
 

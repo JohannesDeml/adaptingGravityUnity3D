@@ -34,7 +34,7 @@ namespace Deml.Physics.Manipulation
             rotationLimitations[2] = maxRotationZ < 180f;
             groundNormal = Vector3.up;
             lastGroundNormal = groundNormal;
-            perfectAlignmentQuaternion = rigidbody.rotation;
+            perfectAlignmentQuaternion = transform.rotation;
         }
 
         // Update is called once per frame
@@ -52,7 +52,7 @@ namespace Deml.Physics.Manipulation
             {
                 rigidbody.angularVelocity /= 2f;
                 float timeFactor = Mathf.Pow(Quaternion.Angle(rigidbody.rotation, perfectAlignmentQuaternion), 1/5f);
-                rigidbody.rotation = Quaternion.Lerp(rigidbody.rotation, perfectAlignmentQuaternion, timeFactor);
+                transform.rotation = Quaternion.Lerp(rigidbody.rotation, perfectAlignmentQuaternion, timeFactor);
             }
         }
 
