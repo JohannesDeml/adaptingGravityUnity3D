@@ -67,7 +67,6 @@ public class PlayerController : MonoBehaviour
 
     private void UpdateRotation(float angle)
     {
-        Debug.Log("Jup");
         Quaternion rotation = Quaternion.AngleAxis(angle*1000f*mouseSensitivity*Time.fixedDeltaTime,
             gravityController.GroundNormal);
         transform.rotation = rotation*transform.rotation;
