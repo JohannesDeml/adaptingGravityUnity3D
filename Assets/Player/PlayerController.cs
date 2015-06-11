@@ -55,6 +55,7 @@ public class PlayerController : MonoBehaviour
         float groundModifier = (gravityController.OnGround) ? 1.0f : 0.2f;
 
         mappedMovement = Vector3.ProjectOnPlane(mappedMovement, gravityController.GroundNormal);
+        Debug.DrawLine(transform.position, transform.position + 3f * mappedMovement, Color.red);
         mappedMovement *= groundModifier*movementSpeed*Time.fixedDeltaTime;
         MoveRelative(mappedMovement);
     }

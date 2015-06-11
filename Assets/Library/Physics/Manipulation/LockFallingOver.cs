@@ -40,48 +40,20 @@ namespace Deml.Physics.Manipulation
         // Update is called once per frame
         private void FixedUpdate()
         {
-            if (groundNormal != lastGroundNormal)
-            {
-                Quaternion rot = Quaternion.FromToRotation(lastGroundNormal, groundNormal);
-                perfectAlignmentQuaternion *= rot;
-                lastGroundNormal = groundNormal;
-            }
-            Debug.Log(Vector3.Angle(transform.up, groundNormal));
+            //if (groundNormal != lastGroundNormal)
+            //{
+            //    Quaternion rot = Quaternion.FromToRotation(lastGroundNormal, groundNormal);
+            //    perfectAlignmentQuaternion = rot * perfectAlignmentQuaternion;
+            //    lastGroundNormal = groundNormal;
+            //}
+            Quaternion rot = Quaternion.FromToRotation(transform.up, groundNormal);
+            perfectAlignmentQuaternion = rot * transform.rotation;
             if (Quaternion.Angle(rigidbody.rotation, perfectAlignmentQuaternion) > 0.2f)
             {
                 rigidbody.angularVelocity /= 2f;
-                rigidbody.rotation = Quaternion.Lerp(rigidbody.rotation, perfectAlignmentQuaternion, Quaternion.Angle(rigidbody.rotation, perfectAlignmentQuaternion));
+                float timeFactor = Mathf.Pow(Quaternion.Angle(rigidbody.rotation, perfectAlignmentQuaternion), 1/5f);
+                rigidbody.rotation = Quaternion.Lerp(rigidbody.rotation, perfectAlignmentQuaternion, timeFactor);
             }
-
-            //Vector3 rotation = rigidbody.rotation.eulerAngles;
-            //Vector3 angularVeloctiy = rigidbody.angularVelocity;
-            //rotation = Vector3.Project(rotation, groundNormal);
-
-            //Quaternion lastRot = rigidbody.rotation;
-            //rigidbody.rotation = Quaternion.LookRotation(transform.forward, groundNormal);
-            ////rigidbody.angularVelocity = Vector3.zero;
-            //Debug.Log(lastRot == rigidbody.rotation);
-
-            //rigidbody.angularVelocity = Vector3.zero;
-            //if (rotationLimitations[0])
-            //{
-            //    rotation.x = rotation.x.ClampAngle(-maxRotationX, maxRotationX);
-            //    rotation.x = Mathf.LerpAngle(rotation.x, 0, 0.3f);
-            //}
-
-            //if (rotationLimitations[1])
-            //{
-            //    rotation.y = rotation.y.ClampAngle(-maxRotationY, maxRotationY);
-            //    rotation.y = Mathf.LerpAngle(rotation.y, 0, 0.3f);
-            //}
-
-            //if (rotationLimitations[2])
-            //{
-            //    rotation.z = rotation.z.ClampAngle(-maxRotationZ, maxRotationZ);
-            //    rotation.z = Mathf.LerpAngle(rotation.z, 0, 0.3f);
-            //}
-            //rigidbody.rotation = Quaternion.Euler(rotation);
-            //rigidbody.angularVelocity = angularVeloctiy;
         }
 
         public void SetGravityDirection(Vector3 newGravityDirection)
