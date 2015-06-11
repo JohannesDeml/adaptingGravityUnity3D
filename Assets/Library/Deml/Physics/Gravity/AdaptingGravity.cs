@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Linq;
+using UnityEngine;
 
 namespace Deml.Physics.Gravity
 {
@@ -9,12 +10,13 @@ namespace Deml.Physics.Gravity
         public static event GravityEventHandler OnGravityChangedEvent;
         public bool OnGround { get; private set; }
         public Vector3 GroundNormal { get; private set; }
+        [SerializeField] private string[] attractingObjectTags = new string[] {"Ground"};
         [SerializeField]
         private float gravityStrength = 15f;
         [SerializeField]
         private float gravityCheckDistance = 5f;
         [SerializeField]
-        private float groundCheckDistance = 0.05f;
+        private float groundCheckDistance = 0.1f;
     
         private Vector3 gravityDirection = Vector3.down;
         private float groundDistance = 0f;
@@ -47,7 +49,7 @@ namespace Deml.Physics.Gravity
             // it is also good to note that the transform position in the sample assets is at the base of the character
             if (UnityEngine.Physics.Raycast(transform.position + (transform.up * 0.1f), gravityDirection, out hitInfo, gravityCheckDistance))
             {
-                if(hitInfo.transform.tag == "Ground")
+                if(attractingObjectTags.Contains(hitInfo.transform.tag))
                 {
                     if (GroundNormal != hitInfo.normal)
                     {
@@ -61,7 +63,7 @@ namespace Deml.Physics.Gravity
                     groundDistance = hitInfo.distance - 0.1f;
                     if (UnityEngine.Physics.Raycast(transform.position + (transform.up * 0.1f), gravityDirection, out hitInfo, groundCheckDistance + 0.1f))
                     {
-                        if (hitInfo.transform.tag == "Ground")
+                        if (attractingObjectTags.Contains(hitInfo.transform.tag))
                         {
                             OnGround = true;
                         }

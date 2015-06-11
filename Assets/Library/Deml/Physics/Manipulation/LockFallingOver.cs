@@ -8,15 +8,15 @@ namespace Deml.Physics.Manipulation
     [RequireComponent(typeof(Rigidbody))]
     public class LockFallingOver : MonoBehaviour
     {
-        [SerializeField]
-        [Range(0f, 180f)]
-        private float maxRotationX = 20f;
-        [SerializeField]
-        [Range(0f, 180f)]
-        private float maxRotationY = 180f;
-        [SerializeField]
-        [Range(0f, 180f)]
-        private float maxRotationZ = 20f;
+        //[SerializeField]
+        //[Range(0f, 180f)]
+        //private float maxRotationX = 20f;
+        //[SerializeField]
+        //[Range(0f, 180f)]
+        //private float maxRotationY = 180f;
+        //[SerializeField]
+        //[Range(0f, 180f)]
+        //private float maxRotationZ = 20f;
 
         private bool[] rotationLimitations;
         private new Rigidbody rigidbody;
@@ -28,10 +28,10 @@ namespace Deml.Physics.Manipulation
         {
             AdaptingGravity.OnGravityChangedEvent += SetGravityDirection;
             rigidbody = GetComponent<Rigidbody>();
-            rotationLimitations = new bool[3];
-            rotationLimitations[0] = maxRotationX < 180f;
-            rotationLimitations[1] = maxRotationY < 180f;
-            rotationLimitations[2] = maxRotationZ < 180f;
+            //rotationLimitations = new bool[3];
+            //rotationLimitations[0] = maxRotationX < 180f;
+            //rotationLimitations[1] = maxRotationY < 180f;
+            //rotationLimitations[2] = maxRotationZ < 180f;
             groundNormal = Vector3.up;
             lastGroundNormal = groundNormal;
             perfectAlignmentQuaternion = transform.rotation;
