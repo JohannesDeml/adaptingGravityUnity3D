@@ -51,8 +51,8 @@ namespace Deml.Physics.Manipulation
             if (Quaternion.Angle(rigidbody.rotation, perfectAlignmentQuaternion) > 0.2f)
             {
                 rigidbody.angularVelocity /= 2f;
-                float timeFactor = Mathf.Pow(Quaternion.Angle(rigidbody.rotation, perfectAlignmentQuaternion), 1/5f);
-                transform.rotation = Quaternion.Lerp(rigidbody.rotation, perfectAlignmentQuaternion, timeFactor);
+                float timeFactor = Mathf.Pow(Quaternion.Angle(rigidbody.rotation, perfectAlignmentQuaternion), 1/2f);
+                transform.rotation = Quaternion.Lerp(rigidbody.rotation, perfectAlignmentQuaternion, timeFactor*Time.fixedDeltaTime);
             }
         }
 
