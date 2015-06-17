@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
-using Deml.Math;
-using Deml.Physics.Gravity;
+using AdaptingGravity.Math;
+using AdaptingGravity.Physics.Gravity;
 
-namespace Deml.Physics.Manipulation
+namespace AdaptingGravity.Physics.Manipulation
 {
     public class LockFallingOver : MonoBehaviour
     {
@@ -21,9 +21,8 @@ namespace Deml.Physics.Manipulation
         [SerializeField]
         private new Rigidbody rigidbody;
         [SerializeField]
-        private AdaptingGravity gravityComponent;
+        private GravityHandler gravityComponent;
         private Vector3 groundNormal;
-        private Vector3 lastGroundNormal;
         private Quaternion perfectAlignmentQuaternion;
         // Use this for initialization
         private void Start()
@@ -43,7 +42,6 @@ namespace Deml.Physics.Manipulation
             //rotationLimitations[1] = maxRotationY < 180f;
             //rotationLimitations[2] = maxRotationZ < 180f;
             groundNormal = Vector3.up;
-            lastGroundNormal = groundNormal;
             perfectAlignmentQuaternion = transform.rotation;
         }
 
@@ -79,7 +77,7 @@ namespace Deml.Physics.Manipulation
             }
             if (gravityComponent == null)
             {
-                gravityComponent = GetComponent<AdaptingGravity>();
+                gravityComponent = GetComponent<GravityHandler>();
             }
         }
     }

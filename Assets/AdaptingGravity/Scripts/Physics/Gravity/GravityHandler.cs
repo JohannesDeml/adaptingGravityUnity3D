@@ -1,10 +1,10 @@
 ﻿using System.Linq;
 using UnityEngine;
 
-namespace Deml.Physics.Gravity
+namespace AdaptingGravity.Physics.Gravity
 {
     [RequireComponent(typeof(Rigidbody))]
-    public class AdaptingGravity : MonoBehaviour
+    public class GravityHandler : MonoBehaviour
     {
         public delegate void GravityEventDelegate(Vector3 gravityDirection);
         public event GravityEventDelegate GravityChanged;
@@ -19,11 +19,13 @@ namespace Deml.Physics.Gravity
         private float groundCheckDistance = 0.1f;
     
         private Vector3 gravityDirection = Vector3.down;
-        private float groundDistance = 0f;
+        public float groundDistance { get; private set; }
         private new Rigidbody rigidbody;
     
     
-        void Awake () {
+        void Awake ()
+        {
+            groundDistance = 0f;
             rigidbody = GetComponent<Rigidbody>();
             GroundNormal = Vector3.up;
         }

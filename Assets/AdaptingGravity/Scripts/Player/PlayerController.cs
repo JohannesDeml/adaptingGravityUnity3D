@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
-using Deml.Physics.Gravity;
+using AdaptingGravity.Physics.Gravity;
 
-namespace Deml.Player
+namespace AdaptingGravity.Player
 {
     [System.Flags]
     public enum PlayerState
@@ -12,19 +12,19 @@ namespace Deml.Player
         Turnable = 1 << 2
     }
 
-    [RequireComponent(typeof (AdaptingGravity))]
+    [RequireComponent(typeof (GravityHandler))]
     [RequireComponent(typeof (Rigidbody))]
     public class PlayerController : MonoBehaviour
     {
         [SerializeField] private float mouseSensitivity = 0.5f;
         [SerializeField] private float movementSpeed = 5f;
         public PlayerState State { get; private set; }
-        private AdaptingGravity gravityController;
+        private GravityHandler gravityController;
         private new Rigidbody rigidbody;
         // Use this for initialization
         private void Awake()
         {
-            gravityController = GetComponent<AdaptingGravity>();
+            gravityController = GetComponent<GravityHandler>();
             rigidbody = GetComponent<Rigidbody>();
             State = PlayerState.Initialized;
             EnableState(PlayerState.Movable);

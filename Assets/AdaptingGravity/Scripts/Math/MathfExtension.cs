@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-namespace Deml.Math
+namespace AdaptingGravity.Math
 {
     public static class MathfExtension
     {

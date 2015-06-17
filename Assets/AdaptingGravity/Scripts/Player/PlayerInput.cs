@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-namespace Deml.Player
+namespace AdaptingGravity.Player
 {
     public class PlayerInput : MonoBehaviour
     {
