@@ -5,7 +5,6 @@ using Deml.Physics.Gravity;
 
 namespace Deml.Physics.Manipulation
 {
-    [RequireComponent(typeof(Rigidbody))]
     public class LockFallingOver : MonoBehaviour
     {
         //[SerializeField]
@@ -19,15 +18,26 @@ namespace Deml.Physics.Manipulation
         //private float maxRotationZ = 20f;
 
         private bool[] rotationLimitations;
+        [SerializeField]
         private new Rigidbody rigidbody;
+        [SerializeField]
+        private AdaptingGravity gravityComponent;
         private Vector3 groundNormal;
         private Vector3 lastGroundNormal;
         private Quaternion perfectAlignmentQuaternion;
         // Use this for initialization
         private void Start()
         {
-            AdaptingGravity.OnGravityChangedEvent += SetGravityDirection;
-            rigidbody = GetComponent<Rigidbody>();
+            if (rigidbody == null)
+            {
+                Debug.LogWarning("There is no rigidbody assigned to lockfallingover");
+            }
+            if (gravityComponent == null)
+            {
+                Debug.LogWarning("There is no gravity component assigned to lockfallingover");
+            }
+            gravityComponent.GravityChanged += SetGravityDirection;
+            
             //rotationLimitations = new bool[3];
             //rotationLimitations[0] = maxRotationX < 180f;
             //rotationLimitations[1] = maxRotationY < 180f;
@@ -59,6 +69,18 @@ namespace Deml.Physics.Manipulation
         public void SetGravityDirection(Vector3 newGravityDirection)
         {
             groundNormal = -newGravityDirection;
+        }
+
+        private void Reset()
+        {
+            if (rigidbody == null)
+            {
+                rigidbody = GetComponent<Rigidbody>();
+            }
+            if (gravityComponent == null)
+            {
+                gravityComponent = GetComponent<AdaptingGravity>();
+            }
         }
     }
 }

@@ -6,8 +6,8 @@ namespace Deml.Physics.Gravity
     [RequireComponent(typeof(Rigidbody))]
     public class AdaptingGravity : MonoBehaviour
     {
-        public delegate void GravityEventHandler(Vector3 gravityDirection);
-        public static event GravityEventHandler OnGravityChangedEvent;
+        public delegate void GravityEventDelegate(Vector3 gravityDirection);
+        public event GravityEventDelegate GravityChanged;
         public bool OnGround { get; private set; }
         public Vector3 GroundNormal { get; private set; }
         [SerializeField] private string[] attractingObjectTags = new string[] {"Ground"};
@@ -55,9 +55,9 @@ namespace Deml.Physics.Gravity
                     {
                         GroundNormal = hitInfo.normal;
                         gravityDirection = -GroundNormal;
-                        if (OnGravityChangedEvent != null)
+                        if (GravityChanged != null)
                         {
-                            OnGravityChangedEvent(gravityDirection);
+                            GravityChanged(gravityDirection);
                         }
                     }
                     groundDistance = hitInfo.distance - 0.1f;

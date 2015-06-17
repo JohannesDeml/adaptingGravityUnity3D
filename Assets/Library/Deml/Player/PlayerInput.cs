@@ -3,9 +3,9 @@ using System.Collections;
 
 namespace Deml.Player
 {
-    [RequireComponent(typeof (PlayerController))]
     public class PlayerInput : MonoBehaviour
     {
+        [SerializeField]
         private PlayerController player;
         private Vector3 input;
         private float deltaRotation;
@@ -13,7 +13,10 @@ namespace Deml.Player
         // Use this for initialization
         private void Awake()
         {
-            player = GetComponent<PlayerController>();
+            if (player == null)
+            {
+                Debug.LogWarning("There is no player component assigned to player input.");
+            }
             input = Vector3.zero;
         }
 
@@ -38,6 +41,14 @@ namespace Deml.Player
             deltaRotation = Input.GetAxis("Mouse X");
             player.Move(input, deltaRotation, jumping);
             jumping = false;
+        }
+
+        private void Reset()
+        {
+            if (player == null)
+            {
+                player = GetComponent<PlayerController>();
+            }
         }
     }
 }
