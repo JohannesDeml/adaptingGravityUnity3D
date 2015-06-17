@@ -13,7 +13,7 @@ To use the library you have to make changes for every object that should be attr
 1. Add the AdaptingGravity script to all objects that should attracted by adapting gravity. You can also start by only adding it to your player. You find the script in Deml/Physics/Gravity. If you are starting your project from scratch you can add the prefab player from Deml/Player/Prefabs/Player.
 2. Once the script is on the player you can tweak specific settings for it.
   1. The attracting object tags will define which tags should be considered to be attracting to the player.
-  2. The gravity strength defines the strength the player will be attracted to objects. The acceleration is set in m/s�. (Side note: The gravity strength of the earth would be 9.81 m/s�, but in games you would normally use a greater strength)
+  2. The gravity strength defines the strength the player will be attracted to objects. The acceleration is set in m/s². (Side note: The gravity strength of the earth would be 9.81 m/s², but in games you would normally use a greater strength)
   3. The gravity check distance defines the distance of the ray that will check of objects that are able to attract the object
   4. The ground check distance defines the distance for which an object will be seen as touching the ground. This could be relevant if you want to only be able to move with the player if it is touching the ground.
 ![A screenshot of unity3D that shows the parameters that can be changed through the editor](https://i.imgur.com/xwYfJ52.jpg)
