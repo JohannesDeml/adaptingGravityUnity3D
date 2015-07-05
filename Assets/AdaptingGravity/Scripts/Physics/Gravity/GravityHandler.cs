@@ -11,20 +11,17 @@ namespace AdaptingGravity.Physics.Gravity
         public event GravityEventDelegate GravityChanged;
         public bool OnGround { get; private set; }
         public Vector3 GroundNormal { get; private set; }
-        [SerializeField]
-        private string[] attractingObjectTags = new string[] {"Ground"};
-        [SerializeField]
-        private float gravityStrength = 15f;
-        [SerializeField]
-        private float gravityCheckDistance = 5f;
-        [SerializeField]
-        private float groundCheckDistance = 0.1f;
+        public string[] attractingObjectTags = new string[] {"Ground"};
+        public float gravityStrength = 15f;
+        public float gravityCheckDistance = 5f;
+        public float groundCheckDistance = 0.1f;
         public GameObject GravityHandles;
         public GameObject GravityHandlePrefab;
         public List<GravityHandle> handles;
 
         private Vector3 gravityDirection = Vector3.down;
         public float groundDistance { get; private set; }
+
         private new Rigidbody rigidbody;
         
     
@@ -100,5 +97,7 @@ namespace AdaptingGravity.Physics.Gravity
                 }
             }
         }
+
+
     }
 }

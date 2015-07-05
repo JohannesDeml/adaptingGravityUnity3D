@@ -20,6 +20,7 @@ public class GravityHandlerEditor : Editor
             newHandle.transform.SetParent(gravityHandler.GravityHandles.transform, true);
             newHandle.name = "Handle" + newHandleID;
             GravityHandle gravityHandle = newHandle.GetComponent<GravityHandle>();
+            gravityHandle.Parent = gravityHandler;
             gravityHandler.handles.Add(gravityHandle);
             EditorUtility.SetDirty(gravityHandler);
             EditorUtility.SetDirty(newHandle);
