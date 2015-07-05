@@ -1,5 +1,6 @@
 ﻿using System.Linq;
 using UnityEngine;
+using System.Collections.Generic;
 
 namespace AdaptingGravity.Physics.Gravity
 {
@@ -10,17 +11,22 @@ namespace AdaptingGravity.Physics.Gravity
         public event GravityEventDelegate GravityChanged;
         public bool OnGround { get; private set; }
         public Vector3 GroundNormal { get; private set; }
-        [SerializeField] private string[] attractingObjectTags = new string[] {"Ground"};
+        [SerializeField]
+        private string[] attractingObjectTags = new string[] {"Ground"};
         [SerializeField]
         private float gravityStrength = 15f;
         [SerializeField]
         private float gravityCheckDistance = 5f;
         [SerializeField]
         private float groundCheckDistance = 0.1f;
-    
+        public GameObject GravityHandles;
+        public GameObject GravityHandlePrefab;
+        public List<GravityHandle> handles;
+
         private Vector3 gravityDirection = Vector3.down;
         public float groundDistance { get; private set; }
         private new Rigidbody rigidbody;
+        
     
     
         void Awake ()
@@ -77,6 +83,22 @@ namespace AdaptingGravity.Physics.Gravity
         public void ChangeGravityStrength(float newGravity)
         {
             gravityStrength = newGravity;
+        }
+
+        private void Reset()
+        {
+            if (GravityHandles == null)
+            {
+                if (transform.FindChild("GravityHandles") != null)
+                {
+                    GravityHandles = transform.FindChild("GravityHandles").gameObject;
+                }
+                else
+                {
+                    GravityHandles = new GameObject("GravityHandles");
+                    GravityHandles.transform.SetParent(transform, false);
+                }
+            }
         }
     }
 }
