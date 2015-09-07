@@ -5,7 +5,7 @@ Think of games like super mario galaxy. Mario can jump from one planet to anothe
 
 ## Technical overview
 To get the desired effect all objects that should adapt to gravity check for ground objects via ray-casts. If they find a ground object near them, they save the normal map of the surface and take the negative surface normal as the new gravity direction.
-![A screenshot of the unity editor in which a cube is on a larger sphere. From the cube a green line is drawn in the current gravity direction](https://i.imgur.com/DpHS4cG.jpg)
+![A screenshot of the unity editor in which a cube is on a larger sphere. From the cube a green line is drawn in the current gravity direction](https://i.imgur.com/YNOR389.jpg)
 
 ## Usage
 To use the library you have to make changes for every object that should be attracting as well as for every object that should be influenced by gravity. The introduction of adapting gravity can be accomplished by those few steps:
@@ -17,13 +17,12 @@ To use the library you have to make changes for every object that should be attr
   3. The gravity check distance defines the distance of the ray that will check of objects that are able to attract the object
   4. The ground check distance defines the distance for which an object will be seen as touching the ground. This could be relevant if you want to only be able to move with the player if it is touching the ground.
 ![A screenshot of unity3D that shows the parameters that can be changed through the editor](https://i.imgur.com/xwYfJ52.jpg)
-3. If you want the player to perfectly rotate to the current gravity direction also add the script LockFallingOver to the player object. It can be found in Deml/Physics/Manipulation
+3. If you want the player to perfectly rotate to the current gravity direction also add the script LockFallingOver to the player object. It can be found in AdaptingGravity/Scripts/Physics/Manipulation
 4. Add one of the tags you defined are valid for attracting objects (You defined them in step 2.1, if you didn't the standard value is only the tag "Ground") to all objects you want to be attracting to other objects.
-5. You're set, try to start the game and play around with the different parameters for your needs
+5. You can where the evaluation of ground objects should happen by adding handles to the object. You will find a button for that in the GravityHandler script.
+ ![Add handles by pressing the button. Afterwards you can rotate and transform them the way you are used to](https://i.imgur.com/qOtjMx5.png)
+6. With the weigted average toogle you can define if the gravity should be defined by the direction of the nearest object that is hit by a ray or by the average of all objects that are hit.
+7. You're set and ready to tweak the settings to your needs.
 
-## Further plans
-What I want to work on in the future:
-
-1. Define specific constraints for all axis in lockFallingOver and a better system to put the object in the right direction
-2. More than one raycast to check where the nearest object is
-3. Work on an appropriate camera for this kind of movement
+##Licence
+AdaptingGravity is released under the [MIT Licence](https://github.com/JohannesDeml/adaptingGravityUnity3D/blob/master/LICENSE).
