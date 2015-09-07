@@ -1,10 +1,20 @@
-﻿using UnityEngine;
-using System.Collections;
-using AdaptingGravity.Math;
-using AdaptingGravity.Physics.Gravity;
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="LockFallingOver.cs" company="Johannes Deml">
+//   Copyright (c) 2015 Johannes Deml. All rights reserved.
+// </copyright>
+// <author>
+//   Johannes Deml
+//   send@johannesdeml.com
+// </author>
+// --------------------------------------------------------------------------------------------------------------------
 
 namespace AdaptingGravity.Physics.Manipulation
 {
+    using UnityEngine;
+    using System.Collections;
+    using AdaptingGravity.Math;
+    using AdaptingGravity.Physics.Gravity;
+
     public class LockFallingOver : MonoBehaviour
     {
         //[SerializeField]

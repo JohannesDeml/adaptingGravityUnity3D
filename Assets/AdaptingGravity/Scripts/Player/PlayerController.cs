@@ -1,9 +1,19 @@
-﻿using UnityEngine;
-using System.Collections;
-using AdaptingGravity.Physics.Gravity;
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="PlayerController.cs" company="Johannes Deml">
+//   Copyright (c) 2015 Johannes Deml. All rights reserved.
+// </copyright>
+// <author>
+//   Johannes Deml
+//   send@johannesdeml.com
+// </author>
+// --------------------------------------------------------------------------------------------------------------------
 
 namespace AdaptingGravity.Player
 {
+    using UnityEngine;
+    using System.Collections;
+    using AdaptingGravity.Physics.Gravity;
+
     [System.Flags]
     public enum PlayerState
     {
@@ -31,6 +41,12 @@ namespace AdaptingGravity.Player
             EnableState(PlayerState.Turnable);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="movementInput"></param>
+        /// <param name="rotationInput"></param>
+        /// <param name="jumpingInput"></param>
         public void Move(Vector3 movementInput, float rotationInput, bool jumpingInput)
         {
 

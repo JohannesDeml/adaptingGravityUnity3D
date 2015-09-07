@@ -1,8 +1,18 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="PlayerInput.cs" company="Johannes Deml">
+//   Copyright (c) 2015 Johannes Deml. All rights reserved.
+// </copyright>
+// <author>
+//   Johannes Deml
+//   send@johannesdeml.com
+// </author>
+// --------------------------------------------------------------------------------------------------------------------
 
 namespace AdaptingGravity.Player
 {
+    using UnityEngine;
+    using System.Collections;
+
     public class PlayerInput : MonoBehaviour
     {
         [SerializeField]

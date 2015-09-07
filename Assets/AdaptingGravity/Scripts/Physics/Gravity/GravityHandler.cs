@@ -1,9 +1,19 @@
-﻿using System.Linq;
-using UnityEngine;
-using System.Collections.Generic;
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="GravityHandler.cs" company="Johannes Deml">
+//   Copyright (c) 2015 Johannes Deml. All rights reserved.
+// </copyright>
+// <author>
+//   Johannes Deml
+//   send@johannesdeml.com
+// </author>
+// --------------------------------------------------------------------------------------------------------------------
 
 namespace AdaptingGravity.Physics.Gravity
 {
+    using System.Linq;
+    using UnityEngine;
+    using System.Collections.Generic;
+
     [RequireComponent(typeof(Rigidbody))]
     public class GravityHandler : MonoBehaviour
     {

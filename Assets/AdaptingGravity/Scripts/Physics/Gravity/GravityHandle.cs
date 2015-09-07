@@ -1,9 +1,19 @@
-﻿using UnityEngine;
-using System.Collections;
-using System.Linq;
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="GravityHandle.cs" company="Johannes Deml">
+//   Copyright (c) 2015 Johannes Deml. All rights reserved.
+// </copyright>
+// <author>
+//   Johannes Deml
+//   send@johannesdeml.com
+// </author>
+// --------------------------------------------------------------------------------------------------------------------
 
 namespace AdaptingGravity.Physics.Gravity
 {
+    using UnityEngine;
+    using System.Collections;
+    using System.Linq;
+
     public class GravityHandle : MonoBehaviour
     {
         public GravityHandler Parent;

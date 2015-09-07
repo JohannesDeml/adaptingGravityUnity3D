@@ -1,8 +1,18 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="MathfExtension.cs" company="Johannes Deml">
+//   Copyright (c) 2015 Johannes Deml. All rights reserved.
+// </copyright>
+// <author>
+//   Johannes Deml
+//   send@johannesdeml.com
+// </author>
+// --------------------------------------------------------------------------------------------------------------------
 
 namespace AdaptingGravity.Math
 {
+    using UnityEngine;
+    using System.Collections;
+
     public static class MathfExtension
     {
         public static float ClampAngle(this float angle, float minAngle, float maxAngle)
