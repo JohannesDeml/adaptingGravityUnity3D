@@ -15,6 +15,7 @@ namespace AdaptingGravity.Physics.Gravity
         public float gravityStrength = 15f;
         public float gravityCheckDistance = 5f;
         public float groundCheckDistance = 0.1f;
+        public bool UseWeightedAverage = false;
         public GameObject GravityHandles;
         public GameObject GravityHandlePrefab;
         public List<GravityHandle> handles;
@@ -35,44 +36,73 @@ namespace AdaptingGravity.Physics.Gravity
 	
         // Update is called once per frame
         void FixedUpdate () {
-            CheckGroundStatus();
+            if (UseWeightedAverage)
+            {
+                CalculateGravityDirectionWeightedAverage();
+            }
+            else
+            {
+                CalculateGravityDirection();
+            }
+            
             if (Mathf.Abs(gravityStrength) > 0.02f)
             {
                 rigidbody.AddForce(gravityDirection * gravityStrength, ForceMode.Force);
             }
         }
 
-        void CheckGroundStatus()
+        void CalculateGravityDirection()
         {
-            RaycastHit hitInfo;
-#if UNITY_EDITOR
-            // helper to visualise the ground check ray in the scene view
-            Debug.DrawLine(transform.position + (Vector3.up * 0.1f), transform.position + (Vector3.up * 0.1f) + (gravityDirection * gravityCheckDistance), Color.green);
-#endif
-            OnGround = false;
-            // 0.1f is a small offset to start the ray from inside the character
-            // it is also good to note that the transform position in the sample assets is at the base of the character
-            if (UnityEngine.Physics.Raycast(transform.position + (transform.up * 0.1f), gravityDirection, out hitInfo, gravityCheckDistance))
+            GravityHandle nearestHandle = null;
+            float nearestGroundDistance = float.MaxValue;
+            foreach (GravityHandle gravityHandle in handles)
             {
-                if(attractingObjectTags.Contains(hitInfo.transform.tag))
+                if (gravityHandle.CalculateGravityDirection())
                 {
-                    if (GroundNormal != hitInfo.normal)
+                    if (gravityHandle.GroundDistance < nearestGroundDistance)
                     {
-                        GroundNormal = hitInfo.normal;
-                        gravityDirection = -GroundNormal;
-                        if (GravityChanged != null)
-                        {
-                            GravityChanged(gravityDirection);
-                        }
+                        nearestGroundDistance = gravityHandle.GroundDistance;
+                        nearestHandle = gravityHandle;
                     }
-                    groundDistance = hitInfo.distance - 0.1f;
-                    if (UnityEngine.Physics.Raycast(transform.position + (transform.up * 0.1f), gravityDirection, out hitInfo, groundCheckDistance + 0.1f))
-                    {
-                        if (attractingObjectTags.Contains(hitInfo.transform.tag))
-                        {
-                            OnGround = true;
-                        }
-                    }
+                }
+            }
+            if (nearestHandle != null)
+            {
+                nearestHandle.IsActiveGravityDirection = true;
+                ApplyNewGroundNormal(nearestHandle.GroundNormal);
+            }
+        }
+
+        void CalculateGravityDirectionWeightedAverage()
+        {
+            float sumGroundDistance = 0f;
+            Vector3 sumGroundNormals = Vector3.zero;
+            foreach (GravityHandle gravityHandle in handles)
+            {
+                if (gravityHandle.CalculateGravityDirection())
+                {
+                    //This creates some strange oscillations
+                    //float weight = groundCheckDistance - gravityHandle.GroundDistance;
+                    float weight = 1f;
+                    sumGroundDistance += weight;
+                    sumGroundNormals += gravityHandle.GroundNormal*weight;
+                    gravityHandle.IsActiveGravityDirection = true;
+                }
+            }
+            Vector3 newGroundNormal = sumGroundNormals/sumGroundDistance;
+            Debug.DrawLine(transform.position, transform.position + newGroundNormal * 3f, Color.red);
+            ApplyNewGroundNormal(newGroundNormal);
+        }
+
+        private void ApplyNewGroundNormal(Vector3 newGroundNormal)
+        {
+            if (GroundNormal != newGroundNormal)
+            {
+                GroundNormal = Vector3.Lerp(GroundNormal, newGroundNormal, 2f * Time.fixedDeltaTime);
+                gravityDirection = -GroundNormal;
+                if (GravityChanged != null)
+                {
+                    GravityChanged(gravityDirection);
                 }
             }
         }
