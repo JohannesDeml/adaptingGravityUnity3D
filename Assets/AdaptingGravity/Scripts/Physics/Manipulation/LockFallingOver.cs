@@ -1,30 +1,31 @@
-﻿using UnityEngine;
-using System.Collections;
-using AdaptingGravity.Math;
-using AdaptingGravity.Physics.Gravity;
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="LockFallingOver.cs" company="Johannes Deml">
+//   Copyright (c) 2015 Johannes Deml. All rights reserved.
+// </copyright>
+// <author>
+//   Johannes Deml
+//   send@johannesdeml.com
+// </author>
+// --------------------------------------------------------------------------------------------------------------------
 
 namespace AdaptingGravity.Physics.Manipulation
 {
+    using UnityEngine;
+    using System.Collections;
+    using AdaptingGravity.Physics.Gravity;
+
     public class LockFallingOver : MonoBehaviour
     {
-        //[SerializeField]
-        //[Range(0f, 180f)]
-        //private float maxRotationX = 20f;
-        //[SerializeField]
-        //[Range(0f, 180f)]
-        //private float maxRotationY = 180f;
-        //[SerializeField]
-        //[Range(0f, 180f)]
-        //private float maxRotationZ = 20f;
-
-        private bool[] rotationLimitations;
         [SerializeField]
         private new Rigidbody rigidbody;
         [SerializeField]
         private GravityHandler gravityComponent;
-        private Vector3 groundNormal;
-        private Quaternion perfectAlignmentQuaternion;
-        // Use this for initialization
+        private Vector3 groundNormal; // The normal is a refernce for the up vector the player should have
+        private Quaternion perfectAlignmentQuaternion; // The rotation the player should have according to the groundNormal
+        
+        /// <summary>
+        /// Check for all components and throw errors if they are not set
+        /// </summary>
         private void Start()
         {
             if (rigidbody == null)
@@ -37,23 +38,16 @@ namespace AdaptingGravity.Physics.Manipulation
             }
             gravityComponent.GravityChanged += SetGravityDirection;
             
-            //rotationLimitations = new bool[3];
-            //rotationLimitations[0] = maxRotationX < 180f;
-            //rotationLimitations[1] = maxRotationY < 180f;
-            //rotationLimitations[2] = maxRotationZ < 180f;
             groundNormal = Vector3.up;
             perfectAlignmentQuaternion = transform.rotation;
         }
 
-        // Update is called once per frame
+        /// <summary>
+        /// Calculates the perfect rotation quaternion and lerps the values of the current transformation and the perfect rotation if 
+        /// their angle differs more than 0.2 degrees
+        /// </summary>
         private void FixedUpdate()
         {
-            //if (groundNormal != lastGroundNormal)
-            //{
-            //    Quaternion rot = Quaternion.FromToRotation(lastGroundNormal, groundNormal);
-            //    perfectAlignmentQuaternion = rot * perfectAlignmentQuaternion;
-            //    lastGroundNormal = groundNormal;
-            //}
             Quaternion rot = Quaternion.FromToRotation(transform.up, groundNormal);
             perfectAlignmentQuaternion = rot * transform.rotation;
             if (Quaternion.Angle(rigidbody.rotation, perfectAlignmentQuaternion) > 0.2f)
@@ -64,11 +58,19 @@ namespace AdaptingGravity.Physics.Manipulation
             }
         }
 
+        /// <summary>
+        /// Is called from the gravity changed event from the gravity handler (<see cref="GravityHandler"/>)
+        /// </summary>
+        /// <param name="newGravityDirection">The negative gravityDirection is used as the new ground normal</param>
         public void SetGravityDirection(Vector3 newGravityDirection)
         {
             groundNormal = -newGravityDirection;
         }
 
+        /// <summary>
+        /// Tries to set the rigidbody and gravity component if they are not set
+        /// For more information about the functionality of reset take a look at http://docs.unity3d.com/ScriptReference/MonoBehaviour.Reset.html
+        /// </summary>
         private void Reset()
         {
             if (rigidbody == null)
