@@ -1,7 +1,7 @@
 # PlayerController.DisableState Method 
  
 
-\[Missing <summary> documentation for "M:AdaptingGravity.Player.PlayerController.DisableState(AdaptingGravity.Player.PlayerState)"\]
+Diables a specific state without changing the values of all other states. If the state is already disabled, there will be no change at all
 
 **Namespace:**&nbsp;<a href="7de7150f-98d4-50a6-2163-3aefeb3dc66b">AdaptingGravity.Player</a><br />**Assembly:**&nbsp;Assembly-CSharp (in Assembly-CSharp.dll) Version: 0.0.0.0
 

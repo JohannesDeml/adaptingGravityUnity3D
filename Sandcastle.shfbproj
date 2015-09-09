@@ -18,7 +18,7 @@
     <HtmlHelpName>Documentation</HtmlHelpName>
     <Language>en-US</Language>
     <BuildAssemblerVerbosity>OnlyWarningsAndErrors</BuildAssemblerVerbosity>
-    <HelpFileFormat>Markdown</HelpFileFormat>
+    <HelpFileFormat>HtmlHelp1</HelpFileFormat>
     <IndentHtml>False</IndentHtml>
     <KeepLogFile>True</KeepLogFile>
     <DisableCodeBlockComponent>False</DisableCodeBlockComponent>
@@ -29,14 +29,21 @@
     <SyntaxFilters>C#</SyntaxFilters>
     <SdkLinkTarget>Blank</SdkLinkTarget>
     <RootNamespaceContainer>False</RootNamespaceContainer>
-    <PresentationStyle>Markdown</PresentationStyle>
+    <PresentationStyle>VS2013</PresentationStyle>
     <Preliminary>False</Preliminary>
     <NamingMethod>Guid</NamingMethod>
-    <HelpTitle>A Sandcastle Documented Class Library</HelpTitle>
+    <HelpTitle>Adapting Gravity Sandcastle documentation</HelpTitle>
     <ContentPlacement>AboveNamespaces</ContentPlacement>
     <DocumentationSources>
       <DocumentationSource sourceFile="UnityVS.AdaptingGravity.CSharp.csproj" />
-<DocumentationSource sourceFile="UnityVS.AdaptingGravity.CSharp.Editor.csproj" /></DocumentationSources>
+      <DocumentationSource sourceFile="UnityVS.AdaptingGravity.CSharp.Editor.csproj" />
+    </DocumentationSources>
+    <NamespaceSummaries>
+      <NamespaceSummaryItem name="AdaptingGravity.Editor" isDocumented="True" xmlns="">All adaptingGravity.Editor classes are used to modify the unity editor in its functionalty. This mainly helps to extend the inspector for easier accessabilty and automation.</NamespaceSummaryItem>
+<NamespaceSummaryItem name="AdaptingGravity.Physics.Gravity" isDocumented="True" xmlns="">The AdaptingGravity.Physics.Gravity namespace is responsible for providing information about the current gravity as well as calculating new gravity properties</NamespaceSummaryItem>
+<NamespaceSummaryItem name="AdaptingGravity.Physics.Manipulation" isDocumented="True" xmlns="">The AdaptingGravity.Physics.Manipulation namespace modifies objects in a way that is not physically accurate but can help to restrict objects to do certain that can otherwise be problematic for gameplay. 
+&lt;example&gt; The player should always have its feet on the ground and should not rotate while it is moving. To stop that, the up vector of the player can always be set to the current normal of the ground.&lt;/example&gt;</NamespaceSummaryItem>
+<NamespaceSummaryItem name="AdaptingGravity.Player" isDocumented="True" xmlns="">The AdaptingGravity.Player namespace includes all classes that handle player input, player movement.</NamespaceSummaryItem></NamespaceSummaries>
   </PropertyGroup>
   <!-- There are no properties for these groups.  AnyCPU needs to appear in order for Visual Studio to perform
 			 the build.  The others are optional common platform types that may appear. -->

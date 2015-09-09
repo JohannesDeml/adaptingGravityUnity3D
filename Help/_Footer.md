@@ -1,5 +1,5 @@
-﻿A Sandcastle Documented Class Library
+﻿Adapting Gravity Sandcastle documentation
 
 
 
-Send comments on this topic to [](mailto:?Subject=A Sandcastle Documented Class Library)
+Send comments on this topic to [](mailto:?Subject=Adapting Gravity Sandcastle documentation)
