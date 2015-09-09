@@ -21,6 +21,7 @@ ExportedObj/
 *.unityproj
 *.booproj
 /Assets/UnityVS/
+/Assets/AdaptingGravity/Doc/LastBuild.log
  
 # ============ #
 # OS generated #
