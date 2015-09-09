@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shfbBuild product="Sandcastle Help File Builder and Tools" version="2015.7.25.0" projectFile="D:\Data\Documents\Unity\AdaptingGravity\Sandcastle.shfbproj" started="09.09.2015 15:53:14">
+<shfbBuild product="Sandcastle Help File Builder and Tools" version="2015.7.25.0" projectFile="D:\Data\Documents\Unity\AdaptingGravity\Sandcastle.shfbproj" started="09.09.2015 16:55:26">
 <buildStep step="Initializing">
 Finding tools...
 The Sandcastle tools are located in &#39;D:\Windows\Programme\SandcastleHelpFileBuilder\&#39;
@@ -8,7 +8,11 @@ Locating components in the following folder(s):
     C:\ProgramData\EWSoftware\Sandcastle Help File Builder\Components and Plug-Ins\
     D:\Windows\Programme\SandcastleHelpFileBuilder\
 Framework reflection data location: D:\Windows\Programme\SandcastleHelpFileBuilder\Data\.NETFramework
-Using presentation style &#39;Markdown&#39; located in &#39;D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\Markdown&#39;
+Using presentation style &#39;VS2013&#39; located in &#39;D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\VS2013&#39;
+Loading and initializing plug-ins...
+Lightweight Website Style Version 2015.7.25.0
+Copyright &#169; 2006-2015, Eric Woodruff, All Rights Reserved
+Portions Copyright &#169; 2014, Sam Harwell, All Rights Reserved
 -------------------------------
 Clearing any prior web/markdown output...
 </buildStep>
@@ -57,16 +61,17 @@ Copying XML comments files
 </buildStep>
 <buildStep step="GenerateSharedContent">
 Generating shared content files (en-US, Englisch (USA))...
-    Last step completed in 00:00:00,0040
+<plugIn name="Lightweight Website Style" behavior="After" priority="1000">
+</plugIn>    Last step completed in 00:00:00,0070
 </buildStep>
 <buildStep step="GenerateApiFilter">
 Generating API filter for MRefBuilder...
-    Last step completed in 00:00:00,0040
+    Last step completed in 00:00:00,0020
 </buildStep>
 <buildStep step="GenerateReflectionInfo">
 Generating reflection information...
 [C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe - GenerateRefInfo.proj]
-Der Buildvorgang wurde am 09.09.2015 15:53:15 gestartet.
+Der Buildvorgang wurde am 09.09.2015 16:55:27 gestartet.
 Projekt &quot;D:\Data\Documents\Unity\AdaptingGravity\Help\Working\GenerateRefInfo.proj&quot; auf Knoten &quot;1&quot; (Standardziele).
 Die Projektdatei enth„lt ToolsVersion=&quot;12.0&quot;. Dieses Toolset ist m”glicherweise nicht bekannt oder nicht vorhanden. In diesem Fall k”nnen Sie das Problem m”glicherweise beheben, indem Sie die entsprechende Version von MSBuild installieren. Oder fr den Build wurde aufgrund der Richtlinie eine bestimmte ToolsVersion erzwungen. Das Projekt wird behandelt, als enthielte es ToolsVersion=&quot;4.0&quot;. Weitere Informationen finden Sie unter http://go.microsoft.com/fwlink/?LinkId=291333. 
 PrepareForBuild:
@@ -86,13 +91,13 @@ Die Erstellung von Projekt &quot;D:\Data\Documents\Unity\AdaptingGravity\Help\Wo
 
 Der Buildvorgang wurde erfolgreich ausgefhrt.
 
-Verstrichene Zeit 00:00:00.79
-    Last step completed in 00:00:00,9089
+Verstrichene Zeit 00:00:00.81
+    Last step completed in 00:00:00,9340
 </buildStep>
 <buildStep step="TransformReflectionInfo">
 Transforming reflection output...
 [C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe - TransformManifest.proj]
-Der Buildvorgang wurde am 09.09.2015 15:53:16 gestartet.
+Der Buildvorgang wurde am 09.09.2015 16:55:28 gestartet.
 Projekt &quot;D:\Data\Documents\Unity\AdaptingGravity\Help\Working\TransformManifest.proj&quot; auf Knoten &quot;1&quot; (Standardziele).
 Die Projektdatei enth„lt ToolsVersion=&quot;12.0&quot;. Dieses Toolset ist m”glicherweise nicht bekannt oder nicht vorhanden. In diesem Fall k”nnen Sie das Problem m”glicherweise beheben, indem Sie die entsprechende Version von MSBuild installieren. Oder fr den Build wurde aufgrund der Richtlinie eine bestimmte ToolsVersion erzwungen. Das Projekt wird behandelt, als enthielte es ToolsVersion=&quot;4.0&quot;. Weitere Informationen finden Sie unter http://go.microsoft.com/fwlink/?LinkId=291333. 
 TransformManifest:
@@ -113,8 +118,8 @@ Die Erstellung von Projekt &quot;D:\Data\Documents\Unity\AdaptingGravity\Help\Wo
 
 Der Buildvorgang wurde erfolgreich ausgefhrt.
 
-Verstrichene Zeit 00:00:00.56
-    Last step completed in 00:00:00,6364
+Verstrichene Zeit 00:00:00.58
+    Last step completed in 00:00:00,6600
 </buildStep>
 <buildStep step="GenerateNamespaceSummaries">
 Generating namespace summary information...
@@ -132,7 +137,7 @@ Merging conceptual and additional tables of contents...
 <buildStep step="GenerateIntermediateTableOfContents">
 Generating intermediate table of contents file...
 [C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe - GenerateIntermediateTOC.proj]
-Der Buildvorgang wurde am 09.09.2015 15:53:17 gestartet.
+Der Buildvorgang wurde am 09.09.2015 16:55:29 gestartet.
 Projekt &quot;D:\Data\Documents\Unity\AdaptingGravity\Help\Working\GenerateIntermediateTOC.proj&quot; auf Knoten &quot;1&quot; (Standardziele).
 Die Projektdatei enth„lt ToolsVersion=&quot;12.0&quot;. Dieses Toolset ist m”glicherweise nicht bekannt oder nicht vorhanden. In diesem Fall k”nnen Sie das Problem m”glicherweise beheben, indem Sie die entsprechende Version von MSBuild installieren. Oder fr den Build wurde aufgrund der Richtlinie eine bestimmte ToolsVersion erzwungen. Das Projekt wird behandelt, als enthielte es ToolsVersion=&quot;4.0&quot;. Weitere Informationen finden Sie unter http://go.microsoft.com/fwlink/?LinkId=291333. 
 GenerateIntermediateTOC:
@@ -146,22 +151,22 @@ Der Buildvorgang wurde erfolgreich ausgefhrt.
 
 Verstrichene Zeit 00:00:00.14
 Generating conceptual content intermediate TOC file...
-    Last step completed in 00:00:00,2252
+    Last step completed in 00:00:00,2302
 </buildStep>
 <buildStep step="CreateBuildAssemblerConfigs">
 Creating Sandcastle configuration files...
     sandcastle.config
-    Last step completed in 00:00:00,1619
+    Last step completed in 00:00:00,1331
 </buildStep>
 <buildStep step="MergeCustomConfigs">
 Merging custom build component configurations
 D:\Data\Documents\Unity\AdaptingGravity\Help\Working\sandcastle.config
-    Last step completed in 00:00:00,0020
+    Last step completed in 00:00:00,0030
 </buildStep>
 <buildStep step="BuildReferenceTopics">
 Building reference help topics...
 [C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe - BuildReferenceTopics.proj]
-Der Buildvorgang wurde am 09.09.2015 15:53:17 gestartet.
+Der Buildvorgang wurde am 09.09.2015 16:55:29 gestartet.
 Projekt &quot;D:\Data\Documents\Unity\AdaptingGravity\Help\Working\BuildReferenceTopics.proj&quot; auf Knoten &quot;1&quot; (Standardziele).
 Die Projektdatei enth„lt ToolsVersion=&quot;12.0&quot;. Dieses Toolset ist m”glicherweise nicht bekannt oder nicht vorhanden. In diesem Fall k”nnen Sie das Problem m”glicherweise beheben, indem Sie die entsprechende Version von MSBuild installieren. Oder fr den Build wurde aufgrund der Richtlinie eine bestimmte ToolsVersion erzwungen. Das Projekt wird behandelt, als enthielte es ToolsVersion=&quot;4.0&quot;. Weitere Informationen finden Sie unter http://go.microsoft.com/fwlink/?LinkId=291333. 
 BuildReferenceTopics:
@@ -1904,82 +1909,133 @@ Die Erstellung von Projekt &quot;D:\Data\Documents\Unity\AdaptingGravity\Help\Wo
 
 Der Buildvorgang wurde erfolgreich ausgefhrt.
 
-Verstrichene Zeit 00:00:09.31
-    Last step completed in 00:00:09,4532
+Verstrichene Zeit 00:00:13.15
+    Last step completed in 00:00:13,3077
 </buildStep>
 <buildStep step="CombiningIntermediateTocFiles">
 Combining conceptual and API intermediate TOC files...
-    Last step completed in 00:00:00,0020
+    Last step completed in 00:00:00,0030
+</buildStep>
+<buildStep step="ExtractingHtmlInfo">
+Extracting HTML info for HTML Help 1 and/or website...
+[C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe - ExtractHtmlInfo.proj]
+Die Projektdatei enth„lt ToolsVersion=&quot;12.0&quot;. Dieses Toolset ist m”glicherweise nicht bekannt oder nicht vorhanden. In diesem Fall k”nnen Sie das Problem m”glicherweise beheben, indem Sie die entsprechende Version von MSBuild installieren. Oder fr den Build wurde aufgrund der Richtlinie eine bestimmte ToolsVersion erzwungen. Das Projekt wird behandelt, als enthielte es ToolsVersion=&quot;4.0&quot;. Weitere Informationen finden Sie unter http://go.microsoft.com/fwlink/?LinkId=291333. 
+Sandcastle Help File Builder and Tools, version 2015.7.25.0
+Copyright &#184; 2006-2015, Eric Woodruff, All Rights Reserved
+E-Mail: Eric@EWoodruff.us
+
+Using LCID &#39;1033&#39;, code page &#39;65001&#39;, encoding charset &#39;UTF-8&#39;.
+
+Processing website files in D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Website
+Processed 59 HTML files
+Sorting keywords and generating See Also indices
+Saving website keyword index to D:\Data\Documents\Unity\AdaptingGravity\Help\Working\WebKI.xml
+Saving website table of contents to D:\Data\Documents\Unity\AdaptingGravity\Help\Working\WebTOC.xml
+    Last step completed in 00:00:00,5304
 </buildStep>
 <buildStep step="CopyStandardHelpContent">
 Copying standard help content...
-D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\Markdown\media\AlertCaution.png -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Markdown\media\AlertCaution.png
-D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\Markdown\media\AlertNote.png -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Markdown\media\AlertNote.png
-D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\Markdown\media\AlertSecurity.png -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Markdown\media\AlertSecurity.png
-D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\Markdown\media\CFW.gif -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Markdown\media\CFW.gif
-D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\Markdown\media\CodeExample.png -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Markdown\media\CodeExample.png
-D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\Markdown\media\privclass.gif -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Markdown\media\privclass.gif
-D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\Markdown\media\privdelegate.gif -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Markdown\media\privdelegate.gif
-D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\Markdown\media\privenumeration.gif -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Markdown\media\privenumeration.gif
-D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\Markdown\media\privevent.gif -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Markdown\media\privevent.gif
-D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\Markdown\media\privextension.gif -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Markdown\media\privextension.gif
-D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\Markdown\media\privfield.gif -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Markdown\media\privfield.gif
-D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\Markdown\media\privinterface.gif -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Markdown\media\privinterface.gif
-D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\Markdown\media\privmethod.gif -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Markdown\media\privmethod.gif
-D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\Markdown\media\privproperty.gif -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Markdown\media\privproperty.gif
-D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\Markdown\media\privstructure.gif -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Markdown\media\privstructure.gif
-D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\Markdown\media\protclass.gif -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Markdown\media\protclass.gif
-D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\Markdown\media\protdelegate.gif -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Markdown\media\protdelegate.gif
-D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\Markdown\media\protenumeration.gif -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Markdown\media\protenumeration.gif
-D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\Markdown\media\protevent.gif -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Markdown\media\protevent.gif
-D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\Markdown\media\protextension.gif -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Markdown\media\protextension.gif
-D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\Markdown\media\protfield.gif -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Markdown\media\protfield.gif
-D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\Markdown\media\protinterface.gif -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Markdown\media\protinterface.gif
-D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\Markdown\media\protmethod.gif -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Markdown\media\protmethod.gif
-D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\Markdown\media\protoperator.gif -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Markdown\media\protoperator.gif
-D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\Markdown\media\protproperty.gif -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Markdown\media\protproperty.gif
-D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\Markdown\media\protstructure.gif -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Markdown\media\protstructure.gif
-D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\Markdown\media\pubclass.gif -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Markdown\media\pubclass.gif
-D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\Markdown\media\pubdelegate.gif -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Markdown\media\pubdelegate.gif
-D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\Markdown\media\pubenumeration.gif -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Markdown\media\pubenumeration.gif
-D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\Markdown\media\pubevent.gif -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Markdown\media\pubevent.gif
-D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\Markdown\media\pubextension.gif -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Markdown\media\pubextension.gif
-D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\Markdown\media\pubfield.gif -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Markdown\media\pubfield.gif
-D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\Markdown\media\pubinterface.gif -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Markdown\media\pubinterface.gif
-D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\Markdown\media\pubmethod.gif -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Markdown\media\pubmethod.gif
-D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\Markdown\media\puboperator.gif -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Markdown\media\puboperator.gif
-D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\Markdown\media\pubproperty.gif -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Markdown\media\pubproperty.gif
-D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\Markdown\media\pubstructure.gif -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Markdown\media\pubstructure.gif
-D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\Markdown\media\slMobile.gif -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Markdown\media\slMobile.gif
-D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\Markdown\media\static.gif -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Markdown\media\static.gif
-D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\Markdown\media\xna.gif -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Markdown\media\xna.gif
-D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\Markdown\MarkdownContent\_Footer.md -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Markdown\_Footer.md
-    Last step completed in 00:00:00,2151
+D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\VS2013\icons\AlertCaution.png -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Website\icons\AlertCaution.png
+D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\VS2013\icons\AlertNote.png -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Website\icons\AlertNote.png
+D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\VS2013\icons\AlertSecurity.png -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Website\icons\AlertSecurity.png
+D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\VS2013\icons\CFW.gif -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Website\icons\CFW.gif
+D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\VS2013\icons\CodeExample.png -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Website\icons\CodeExample.png
+D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\VS2013\icons\favicon.ico -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Website\icons\favicon.ico
+D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\VS2013\icons\privclass.gif -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Website\icons\privclass.gif
+D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\VS2013\icons\privdelegate.gif -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Website\icons\privdelegate.gif
+D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\VS2013\icons\privenumeration.gif -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Website\icons\privenumeration.gif
+D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\VS2013\icons\privevent.gif -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Website\icons\privevent.gif
+D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\VS2013\icons\privextension.gif -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Website\icons\privextension.gif
+D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\VS2013\icons\privfield.gif -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Website\icons\privfield.gif
+D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\VS2013\icons\privinterface.gif -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Website\icons\privinterface.gif
+D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\VS2013\icons\privmethod.gif -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Website\icons\privmethod.gif
+D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\VS2013\icons\privproperty.gif -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Website\icons\privproperty.gif
+D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\VS2013\icons\privstructure.gif -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Website\icons\privstructure.gif
+D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\VS2013\icons\protclass.gif -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Website\icons\protclass.gif
+D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\VS2013\icons\protdelegate.gif -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Website\icons\protdelegate.gif
+D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\VS2013\icons\protenumeration.gif -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Website\icons\protenumeration.gif
+D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\VS2013\icons\protevent.gif -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Website\icons\protevent.gif
+D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\VS2013\icons\protextension.gif -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Website\icons\protextension.gif
+D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\VS2013\icons\protfield.gif -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Website\icons\protfield.gif
+D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\VS2013\icons\protinterface.gif -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Website\icons\protinterface.gif
+D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\VS2013\icons\protmethod.gif -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Website\icons\protmethod.gif
+D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\VS2013\icons\protoperator.gif -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Website\icons\protoperator.gif
+D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\VS2013\icons\protproperty.gif -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Website\icons\protproperty.gif
+D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\VS2013\icons\protstructure.gif -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Website\icons\protstructure.gif
+D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\VS2013\icons\pubclass.gif -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Website\icons\pubclass.gif
+D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\VS2013\icons\pubdelegate.gif -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Website\icons\pubdelegate.gif
+D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\VS2013\icons\pubenumeration.gif -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Website\icons\pubenumeration.gif
+D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\VS2013\icons\pubevent.gif -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Website\icons\pubevent.gif
+D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\VS2013\icons\pubextension.gif -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Website\icons\pubextension.gif
+D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\VS2013\icons\pubfield.gif -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Website\icons\pubfield.gif
+D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\VS2013\icons\pubinterface.gif -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Website\icons\pubinterface.gif
+D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\VS2013\icons\pubmethod.gif -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Website\icons\pubmethod.gif
+D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\VS2013\icons\puboperator.gif -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Website\icons\puboperator.gif
+D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\VS2013\icons\pubproperty.gif -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Website\icons\pubproperty.gif
+D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\VS2013\icons\pubstructure.gif -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Website\icons\pubstructure.gif
+D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\VS2013\icons\SectionCollapsed.png -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Website\icons\SectionCollapsed.png
+D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\VS2013\icons\SectionExpanded.png -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Website\icons\SectionExpanded.png
+D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\VS2013\icons\slMobile.gif -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Website\icons\slMobile.gif
+D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\VS2013\icons\static.gif -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Website\icons\static.gif
+D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\VS2013\icons\xna.gif -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Website\icons\xna.gif
+D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\VS2013\scripts\branding.js -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Website\scripts\branding.js
+D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\VS2013\styles\branding-cs-CZ.css -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Website\styles\branding-cs-CZ.css
+D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\VS2013\styles\branding-de-DE.css -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Website\styles\branding-de-DE.css
+D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\VS2013\styles\branding-en-US.css -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Website\styles\branding-en-US.css
+D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\VS2013\styles\branding-es-ES.css -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Website\styles\branding-es-ES.css
+D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\VS2013\styles\branding-fr-FR.css -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Website\styles\branding-fr-FR.css
+D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\VS2013\styles\branding-Help1.css -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Website\styles\branding-Help1.css
+D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\VS2013\styles\branding-HelpViewer.css -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Website\styles\branding-HelpViewer.css
+D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\VS2013\styles\branding-it-IT.css -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Website\styles\branding-it-IT.css
+D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\VS2013\styles\branding-ja-JP.css -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Website\styles\branding-ja-JP.css
+D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\VS2013\styles\branding-ko-KR.css -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Website\styles\branding-ko-KR.css
+D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\VS2013\styles\branding-pl-PL.css -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Website\styles\branding-pl-PL.css
+D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\VS2013\styles\branding-pt-BR.css -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Website\styles\branding-pt-BR.css
+D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\VS2013\styles\branding-ru-RU.css -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Website\styles\branding-ru-RU.css
+D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\VS2013\styles\branding-tr-TR.css -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Website\styles\branding-tr-TR.css
+D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\VS2013\styles\branding-Website.css -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Website\styles\branding-Website.css
+D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\VS2013\styles\branding-zh-CN.css -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Website\styles\branding-zh-CN.css
+D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\VS2013\styles\branding-zh-TW.css -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Website\styles\branding-zh-TW.css
+D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\VS2013\styles\branding.css -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Website\styles\branding.css
+D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\VS2013\Web\index.html -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Website\index.html
+D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\VS2013\Web\search.html -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Website\search.html
+D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\VS2013\Web\SearchHelp.aspx -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Website\SearchHelp.aspx
+D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\VS2013\Web\SearchHelp.inc.php -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Website\SearchHelp.inc.php
+D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\VS2013\Web\SearchHelp.php -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Website\SearchHelp.php
+D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\VS2013\Web\Web.Config -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Website\Web.Config
+D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\VS2013\Web\icons\Search.png -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Website\icons\Search.png
+D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\VS2013\Web\icons\TocClose.gif -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Website\icons\TocClose.gif
+D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\VS2013\Web\icons\TocCollapsed.gif -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Website\icons\TocCollapsed.gif
+D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\VS2013\Web\icons\TocExpanded.gif -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Website\icons\TocExpanded.gif
+D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\VS2013\Web\icons\TocOpen.gif -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Website\icons\TocOpen.gif
+D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\VS2013\Web\scripts\branding-Website.js -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Website\scripts\branding-Website.js
+D:\Windows\Programme\SandcastleHelpFileBuilder\PresentationStyles\VS2013\Web\scripts\jquery-1.11.0.min.js -&gt; D:\Data\Documents\Unity\AdaptingGravity\Help\Working\Output\Website\scripts\jquery-1.11.0.min.js
+    Last step completed in 00:00:00,2552
 </buildStep>
 <buildStep step="GenerateHelpFormatTableOfContents">
-Executing informational Generate Table of Contents build step for plug-ins (not used for Markdown)
-    Last step completed in 00:00:00,0000
+Generating website table of contents file...
+    Last step completed in 00:00:00,0030
 </buildStep>
-<buildStep step="GenerateHelpProject">
-Executing informational Generate Help Project build step for plug-ins (not used for Markdown)
-    Last step completed in 00:00:00,0000
+<buildStep step="GenerateFullTextIndex">
+Generating full-text index for the website...
+
+<plugIn name="Lightweight Website Style" behavior="After" priority="1000">
+Adding lightweight search and TOC elements to each topic...
+</plugIn>    Last step completed in 00:00:00,8556
 </buildStep>
-<buildStep step="CompilingHelpFile">
-Generating markdown content...
-[C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe - GenerateMarkdownContent.proj]
-Die Projektdatei enth„lt ToolsVersion=&quot;12.0&quot;. Dieses Toolset ist m”glicherweise nicht bekannt oder nicht vorhanden. In diesem Fall k”nnen Sie das Problem m”glicherweise beheben, indem Sie die entsprechende Version von MSBuild installieren. Oder fr den Build wurde aufgrund der Richtlinie eine bestimmte ToolsVersion erzwungen. Das Projekt wird behandelt, als enthielte es ToolsVersion=&quot;4.0&quot;. Weitere Informationen finden Sie unter http://go.microsoft.com/fwlink/?LinkId=291333. 
-  Finished generating 59 topics
-  Copying content to output folder...
-  Finished copying 102 files
-    Last step completed in 00:00:00,7584
+<buildStep step="CopyingWebsiteFiles">
+Copying website files to output folder...
+
+Copied 181 files for the website content
+    Last step completed in 00:00:00,6194
 </buildStep>
 <buildStep step="CleanIntermediates">
 Removing intermediate files...
-    Last step completed in 00:00:00,1221
+    Last step completed in 00:00:00,1141
 </buildStep>
 <buildStep step="Completed">
 
-Build completed successfully at 09.09.2015 15:53:28.  Total time: 00:00:13,2855
+Build completed successfully at 09.09.2015 16:55:45.  Total time: 00:00:18,4631
 
 </buildStep>
 </shfbBuild>

@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpKI>
+  <HelpKINode Title="AdaptingGravity.Editor namespace" Url="html/73088e84-e0bc-b3ee-52ce-16a51fca114e.htm" />
+  <HelpKINode Title="AdaptingGravity.Editor.GravityHandlerEditor class" Url="html/030b2489-01b3-f01b-7d83-8bf8a640d68e.htm" />
+  <HelpKINode Title="AdaptingGravity.Physics.Gravity namespace" Url="html/35451bf6-f6b5-b47f-fa3a-5584d785d7e3.htm" />
+  <HelpKINode Title="AdaptingGravity.Physics.Gravity.GravityHandle class" Url="html/9a558b4c-4b03-b3b0-d247-fa2fcf76825a.htm" />
+  <HelpKINode Title="AdaptingGravity.Physics.Gravity.GravityHandler class" Url="html/b7d1cc23-1147-52b6-2884-245c4a195329.htm" />
+  <HelpKINode Title="AdaptingGravity.Physics.Gravity.GravityHandler.GravityEventDelegate delegate" Url="html/05853e1e-5b85-5e86-3b0e-2dad9bb6ebea.htm" />
+  <HelpKINode Title="AdaptingGravity.Physics.Manipulation namespace" Url="html/dab458b4-8c41-18fd-2d94-a3ddec26f694.htm" />
+  <HelpKINode Title="AdaptingGravity.Physics.Manipulation.LockFallingOver class" Url="html/01508094-f03d-b823-f4d5-1871826bfd98.htm" />
+  <HelpKINode Title="AdaptingGravity.Player namespace" Url="html/7de7150f-98d4-50a6-2163-3aefeb3dc66b.htm" />
+  <HelpKINode Title="AdaptingGravity.Player.PlayerController class" Url="html/9de803f3-096b-bfbc-b624-f1f5ddae6a6a.htm" />
+  <HelpKINode Title="AdaptingGravity.Player.PlayerInput class" Url="html/d58728b3-e623-b7eb-b1c6-230981cf9f4d.htm" />
+  <HelpKINode Title="AdaptingGravity.Player.PlayerState enumeration" Url="html/4b5e820c-7b4b-373f-d8a9-358f53627745.htm" />
+  <HelpKINode Title="attractingObjectTags field" Url="html/e9220a5c-c00a-16ac-b4ca-6c5a4064982e.htm" />
+  <HelpKINode Title="CalculateGravityDirection method" Url="html/d1c59c2a-d7fd-b334-4936-1b0872c6e43b.htm" />
+  <HelpKINode Title="ChangeGravityStrength method" Url="html/ec33cf3d-a12d-94b6-dad0-f711cbb9c174.htm" />
+  <HelpKINode Title="DisableState method" Url="html/ac5143b9-289a-c565-df17-beecfa7fdcdb.htm" />
+  <HelpKINode Title="EnableState method" Url="html/980934f7-04a8-336a-1fcd-bbce8d3d8285.htm" />
+  <HelpKINode Title="GravityChanged event" Url="html/091e4a93-36c6-7551-0fd6-b9221d0d89ac.htm" />
+  <HelpKINode Title="gravityCheckDistance field" Url="html/cefaa630-d767-7e7b-4bdd-6f84680ea5a3.htm" />
+  <HelpKINode Title="GravityHandle class">
+    <HelpKINode Title="GravityHandle Class" Url="html/9a558b4c-4b03-b3b0-d247-fa2fcf76825a.htm" />
+    <HelpKINode Title="about GravityHandle class" Url="html/9a558b4c-4b03-b3b0-d247-fa2fcf76825a.htm" />
+    <HelpKINode Title="constructor" Url="html/38007644-6f5e-32d5-7f8f-3712eb822b84.htm" />
+    <HelpKINode Title="fields" Url="html/8ceb3791-bcad-16f2-db9e-a11e15787dab.htm" />
+    <HelpKINode Title="methods" Url="html/6f2b4620-8bb9-88c3-28a6-49c9b80c6449.htm" />
+    <HelpKINode Title="properties" Url="html/9ba5ac1f-33b9-bb8a-60c1-a6d1f2a3f3b8.htm" />
+  </HelpKINode>
+  <HelpKINode Title="GravityHandle.CalculateGravityDirection method" Url="html/d1c59c2a-d7fd-b334-4936-1b0872c6e43b.htm" />
+  <HelpKINode Title="GravityHandle.GravityHandle constructor" Url="html/38007644-6f5e-32d5-7f8f-3712eb822b84.htm" />
+  <HelpKINode Title="GravityHandle.GroundDistance property" Url="html/c426acb6-19e6-5a66-48f2-ebe683ea9d62.htm" />
+  <HelpKINode Title="GravityHandle.GroundNormal property" Url="html/1027a18a-bc7c-2be5-d321-06da05cc0254.htm" />
+  <HelpKINode Title="GravityHandle.IsActiveGravityDirection field" Url="html/da15654a-9a9c-7740-0bae-0c953f856d18.htm" />
+  <HelpKINode Title="GravityHandle.OnGround property" Url="html/21c7fc1a-ff72-45a0-fedf-a91188e0521b.htm" />
+  <HelpKINode Title="GravityHandle.Parent field" Url="html/4b7306ed-ce58-a188-3ae9-cb62e81e4600.htm" />
+  <HelpKINode Title="GravityHandlePrefab field" Url="html/fb637f66-af06-d11f-877e-a82b6d7f5ed2.htm" />
+  <HelpKINode Title="GravityHandler class">
+    <HelpKINode Title="GravityHandler Class" Url="html/b7d1cc23-1147-52b6-2884-245c4a195329.htm" />
+    <HelpKINode Title="about GravityHandler class" Url="html/b7d1cc23-1147-52b6-2884-245c4a195329.htm" />
+    <HelpKINode Title="constructor" Url="html/51d0ea38-cac0-4a6c-1521-fa3f2fc5d54a.htm" />
+    <HelpKINode Title="events" Url="html/c7f10352-e1b0-de8d-0b57-8bbb50ff6922.htm" />
+    <HelpKINode Title="fields" Url="html/ddbb9044-c043-c13e-34eb-dc0f274e2ad3.htm" />
+    <HelpKINode Title="methods" Url="html/87f6035e-a51b-605b-0619-7c272fc8f8e1.htm" />
+    <HelpKINode Title="properties" Url="html/b1d75da1-f1fb-51c4-c2cc-afd5f731eab5.htm" />
+  </HelpKINode>
+  <HelpKINode Title="GravityHandler.attractingObjectTags field" Url="html/e9220a5c-c00a-16ac-b4ca-6c5a4064982e.htm" />
+  <HelpKINode Title="GravityHandler.ChangeGravityStrength method" Url="html/ec33cf3d-a12d-94b6-dad0-f711cbb9c174.htm" />
+  <HelpKINode Title="GravityHandler.GravityChanged event" Url="html/091e4a93-36c6-7551-0fd6-b9221d0d89ac.htm" />
+  <HelpKINode Title="GravityHandler.gravityCheckDistance field" Url="html/cefaa630-d767-7e7b-4bdd-6f84680ea5a3.htm" />
+  <HelpKINode Title="GravityHandler.GravityEventDelegate delegate" Url="html/05853e1e-5b85-5e86-3b0e-2dad9bb6ebea.htm" />
+  <HelpKINode Title="GravityHandler.GravityHandlePrefab field" Url="html/fb637f66-af06-d11f-877e-a82b6d7f5ed2.htm" />
+  <HelpKINode Title="GravityHandler.GravityHandler constructor" Url="html/51d0ea38-cac0-4a6c-1521-fa3f2fc5d54a.htm" />
+  <HelpKINode Title="GravityHandler.GravityHandles field" Url="html/ba246e81-e52c-e79f-c7a7-e86cb6b44eae.htm" />
+  <HelpKINode Title="GravityHandler.gravityStrength field" Url="html/f9674f2b-6caa-346d-d8c9-f7fda8cc5613.htm" />
+  <HelpKINode Title="GravityHandler.groundCheckDistance field" Url="html/3682f601-b549-3b26-5213-f97cd25ccd8b.htm" />
+  <HelpKINode Title="GravityHandler.groundDistance property" Url="html/b51658e1-b36d-7746-09a3-4260cdb1435d.htm" />
+  <HelpKINode Title="GravityHandler.GroundNormal property" Url="html/72658bd3-3c0e-a0eb-779b-8bf26f753ed4.htm" />
+  <HelpKINode Title="GravityHandler.handles field" Url="html/63983689-52a4-b98f-7b69-958e0b192035.htm" />
+  <HelpKINode Title="GravityHandler.OnGround property" Url="html/74e2f680-224c-d70e-2a40-3560cf75d852.htm" />
+  <HelpKINode Title="GravityHandler.UseAverageGravityDirection field" Url="html/e15dad0b-3fa0-1c92-6443-43f5170df1ce.htm" />
+  <HelpKINode Title="GravityHandlerEditor class">
+    <HelpKINode Title="GravityHandlerEditor Class" Url="html/030b2489-01b3-f01b-7d83-8bf8a640d68e.htm" />
+    <HelpKINode Title="about GravityHandlerEditor class" Url="html/030b2489-01b3-f01b-7d83-8bf8a640d68e.htm" />
+    <HelpKINode Title="constructor" Url="html/5bdcede7-2aba-cf22-a49f-f29067bf3e4c.htm" />
+    <HelpKINode Title="methods" Url="html/84d987a9-2422-e969-c51f-eaec7dbf5f22.htm" />
+    <HelpKINode Title="properties" Url="html/ebae2df7-486c-122b-9c0d-c43cf6da0a65.htm" />
+  </HelpKINode>
+  <HelpKINode Title="GravityHandlerEditor.GravityHandlerEditor constructor" Url="html/5bdcede7-2aba-cf22-a49f-f29067bf3e4c.htm" />
+  <HelpKINode Title="GravityHandlerEditor.OnInspectorGUI method" Url="html/e2bc9dae-843c-50ed-8ba6-23d290f4ee31.htm" />
+  <HelpKINode Title="GravityHandles field" Url="html/ba246e81-e52c-e79f-c7a7-e86cb6b44eae.htm" />
+  <HelpKINode Title="gravityStrength field" Url="html/f9674f2b-6caa-346d-d8c9-f7fda8cc5613.htm" />
+  <HelpKINode Title="groundCheckDistance field" Url="html/3682f601-b549-3b26-5213-f97cd25ccd8b.htm" />
+  <HelpKINode Title="groundDistance property" Url="html/b51658e1-b36d-7746-09a3-4260cdb1435d.htm" />
+  <HelpKINode Title="GroundDistance property" Url="html/c426acb6-19e6-5a66-48f2-ebe683ea9d62.htm" />
+  <HelpKINode Title="GroundNormal property">
+    <HelpKINode Title="GravityHandle.GroundNormal Property " Url="html/1027a18a-bc7c-2be5-d321-06da05cc0254.htm" />
+    <HelpKINode Title="GravityHandler.GroundNormal Property " Url="html/72658bd3-3c0e-a0eb-779b-8bf26f753ed4.htm" />
+  </HelpKINode>
+  <HelpKINode Title="handles field" Url="html/63983689-52a4-b98f-7b69-958e0b192035.htm" />
+  <HelpKINode Title="HasState method" Url="html/8aed7e59-2c51-7c1d-21e6-592350962534.htm" />
+  <HelpKINode Title="Initialized enumeration member" Url="html/4b5e820c-7b4b-373f-d8a9-358f53627745.htm" />
+  <HelpKINode Title="IsActiveGravityDirection field" Url="html/da15654a-9a9c-7740-0bae-0c953f856d18.htm" />
+  <HelpKINode Title="LockFallingOver class">
+    <HelpKINode Title="LockFallingOver Class" Url="html/01508094-f03d-b823-f4d5-1871826bfd98.htm" />
+    <HelpKINode Title="about LockFallingOver class" Url="html/01508094-f03d-b823-f4d5-1871826bfd98.htm" />
+    <HelpKINode Title="constructor" Url="html/f3cefa23-de68-a96e-0b53-bb681340db76.htm" />
+    <HelpKINode Title="methods" Url="html/39d35e83-c1ba-6823-391b-6896050cd1c2.htm" />
+    <HelpKINode Title="properties" Url="html/99c53c9e-9d5a-1621-3cc8-184706322922.htm" />
+  </HelpKINode>
+  <HelpKINode Title="LockFallingOver.LockFallingOver constructor" Url="html/f3cefa23-de68-a96e-0b53-bb681340db76.htm" />
+  <HelpKINode Title="LockFallingOver.SetGravityDirection method" Url="html/b07f0d23-56a1-6b3b-de97-4fcc1fed1df4.htm" />
+  <HelpKINode Title="Movable enumeration member" Url="html/4b5e820c-7b4b-373f-d8a9-358f53627745.htm" />
+  <HelpKINode Title="Move method" Url="html/cc0b7f43-c825-a703-1be9-2b73e904c505.htm" />
+  <HelpKINode Title="OnGround property">
+    <HelpKINode Title="GravityHandle.OnGround Property " Url="html/21c7fc1a-ff72-45a0-fedf-a91188e0521b.htm" />
+    <HelpKINode Title="GravityHandler.OnGround Property " Url="html/74e2f680-224c-d70e-2a40-3560cf75d852.htm" />
+  </HelpKINode>
+  <HelpKINode Title="OnInspectorGUI method" Url="html/e2bc9dae-843c-50ed-8ba6-23d290f4ee31.htm" />
+  <HelpKINode Title="Parent field" Url="html/4b7306ed-ce58-a188-3ae9-cb62e81e4600.htm" />
+  <HelpKINode Title="PlayerController class">
+    <HelpKINode Title="PlayerController Class" Url="html/9de803f3-096b-bfbc-b624-f1f5ddae6a6a.htm" />
+    <HelpKINode Title="about PlayerController class" Url="html/9de803f3-096b-bfbc-b624-f1f5ddae6a6a.htm" />
+    <HelpKINode Title="constructor" Url="html/2150bddc-7d97-e26b-ec18-fcd8a3328c5e.htm" />
+    <HelpKINode Title="methods" Url="html/bf173ba2-451e-790f-f903-bb0688c17682.htm" />
+    <HelpKINode Title="properties" Url="html/86ac5823-b2c8-2b11-02f8-aaaa35b757e0.htm" />
+  </HelpKINode>
+  <HelpKINode Title="PlayerController.DisableState method" Url="html/ac5143b9-289a-c565-df17-beecfa7fdcdb.htm" />
+  <HelpKINode Title="PlayerController.EnableState method" Url="html/980934f7-04a8-336a-1fcd-bbce8d3d8285.htm" />
+  <HelpKINode Title="PlayerController.HasState method" Url="html/8aed7e59-2c51-7c1d-21e6-592350962534.htm" />
+  <HelpKINode Title="PlayerController.Move method" Url="html/cc0b7f43-c825-a703-1be9-2b73e904c505.htm" />
+  <HelpKINode Title="PlayerController.PlayerController constructor" Url="html/2150bddc-7d97-e26b-ec18-fcd8a3328c5e.htm" />
+  <HelpKINode Title="PlayerController.State property" Url="html/5b5e7f6a-4605-75ca-7807-cb65bd2dbe1b.htm" />
+  <HelpKINode Title="PlayerInput class">
+    <HelpKINode Title="PlayerInput Class" Url="html/d58728b3-e623-b7eb-b1c6-230981cf9f4d.htm" />
+    <HelpKINode Title="about PlayerInput class" Url="html/d58728b3-e623-b7eb-b1c6-230981cf9f4d.htm" />
+    <HelpKINode Title="constructor" Url="html/d2d5404e-25e5-f7e0-7843-60cc19afcbcb.htm" />
+    <HelpKINode Title="methods" Url="html/7cffe920-a393-38f4-90cd-9c19d54b0466.htm" />
+    <HelpKINode Title="properties" Url="html/32f58cf3-ca40-fa2b-2e67-e58781a4a59c.htm" />
+  </HelpKINode>
+  <HelpKINode Title="PlayerInput.PlayerInput constructor" Url="html/d2d5404e-25e5-f7e0-7843-60cc19afcbcb.htm" />
+  <HelpKINode Title="PlayerState enumeration" Url="html/4b5e820c-7b4b-373f-d8a9-358f53627745.htm" />
+  <HelpKINode Title="SetGravityDirection method" Url="html/b07f0d23-56a1-6b3b-de97-4fcc1fed1df4.htm" />
+  <HelpKINode Title="State property" Url="html/5b5e7f6a-4605-75ca-7807-cb65bd2dbe1b.htm" />
+  <HelpKINode Title="Turnable enumeration member" Url="html/4b5e820c-7b4b-373f-d8a9-358f53627745.htm" />
+  <HelpKINode Title="UseAverageGravityDirection field" Url="html/e15dad0b-3fa0-1c92-6443-43f5170df1ce.htm" />
+</HelpKI>
